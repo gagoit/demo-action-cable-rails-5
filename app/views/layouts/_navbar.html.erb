@@ -32,6 +32,13 @@
               </li>
             </ul>
           </li>
+        <% else %>
+          <li>
+            <%= link_to "Log in", new_session_path(:user) %><br />
+          </li>
+          <li>
+            <%= link_to "Sign up", new_registration_path(:user) %><br />
+          </li>
         <% end %>
       </ul>
     </div>

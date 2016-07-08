@@ -1,0 +1,9 @@
+development:
+  adapter: async
+
+test:
+  adapter: async
+
+production:
+  adapter: redis
+  url: redis://redistogo:1db0fd76d479a17f56b66eae4c39bab9@catfish.redistogo.com:10859/

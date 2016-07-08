@@ -1,0 +1,12 @@
+<div class="row col-md-8 col-md-offset-2" id="chat-room-page">
+  <h1><%= @chat_room.topic %></h1>
+
+  <div class="panel panel-default" id="chat-room-area" data-room="<%= @chat_room.id %>" data-user="<%= current_user.email %>">
+    <div class="panel-body" id="messages">
+      <%= render partial: 'messages/message', collection: @chat_room.messages%>
+    </div>
+    <p id="is_speaking"></p>
+  </div>
+
+  <%= render partial: 'messages/message_form', locals: {message: @message, chat_room: @chat_room}%>
+</div>

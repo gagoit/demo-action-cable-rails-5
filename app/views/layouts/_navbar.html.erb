@@ -8,7 +8,9 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to "Chat rooms", root_url, class: "navbar-brand" %>
-      <%= link_to "#{current_user.email} is loggin", '#', class: "navbar-brand" %>
+      <% if user_signed_in? %>
+        <%= link_to "#{current_user.email} is loggin", '#', class: "navbar-brand" %>
+      <% end %>
     </div>
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
